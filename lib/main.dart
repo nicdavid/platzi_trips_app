@@ -61,7 +61,7 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         appBar: AppBar(
           leading: const Icon(Icons.arrow_back_ios),
-          title: const Text('Mi primer App......!!! je je'),
+          title: const Text('Mi primer App......!!!'),
           backgroundColor: const Color.fromARGB(223, 12, 18, 78),
         ),
         body: DescriptionPlace('Bahamas', 4, miText),
