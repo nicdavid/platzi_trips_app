@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'description_place.dart';
+import 'review.dart';
 
 void main() => runApp(MyApp());
 
@@ -7,7 +8,8 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
 
   String miText =
-      'Hola Nullam ut sodales est. Curabitur in condimentum mauris, ut scelerisque sem. Nunc ut sapien a massa malesuada mollis. Duis convallis justo elementum magna elementum dignissim. Vestibulum semper orci id metus volutpat, vel faucibus ipsum feugiat. Pellentesque ac nunc ut risus volutpat hendrerit. Proin sed ligula vel justo molestie laoreet. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Ut suscipit pharetra ligula. Aenean at quam in arcu eleifend dignissim. Integer efficitur rhoncus fringilla. Sed turpis elit, imperdiet id egestas vitae, consectetur sed dolor.';
+      "Hola Nullam ut sodales est. Curabitur in condimentum mauris, ut scelerisque sem";
+  // 'Hola Nullam ut sodales est. Curabitur in condimentum mauris, ut scelerisque sem. Nunc ut sapien a massa malesuada mollis. Duis convallis justo elementum magna elementum dignissim. Vestibulum semper orci id metus volutpat, vel faucibus ipsum feugiat. Pellentesque ac nunc ut risus volutpat hendrerit. Proin sed ligula vel justo molestie laoreet. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Ut suscipit pharetra ligula. Aenean at quam in arcu eleifend dignissim. Integer efficitur rhoncus fringilla. Sed turpis elit, imperdiet id egestas vitae, consectetur sed dolor.';
 
   @override
   Widget build(BuildContext context) {
@@ -59,13 +61,18 @@ class MyApp extends StatelessWidget {
 
       // --> Implementación
       home: Scaffold(
-        appBar: AppBar(
-          leading: const Icon(Icons.arrow_back_ios),
-          title: const Text('Mi primer App......!!!'),
-          backgroundColor: const Color.fromARGB(223, 12, 18, 78),
-        ),
-        body: DescriptionPlace('Bahamas', 4, miText),
-      ),
+          appBar: AppBar(
+            leading: const Icon(Icons.arrow_back_ios),
+            title: const Text('Mi primer App //......!!!'),
+            backgroundColor: const Color.fromARGB(223, 12, 18, 78),
+          ),
+          body: Column(
+            children: <Widget>[
+              DescriptionPlace('Bahamas', 4, miText),
+              Review('Nicky Ramos', 'I review 5 photos',
+                  'There is an amazing place in Sri Lanka'),
+            ],
+          )),
     );
   }
 }
